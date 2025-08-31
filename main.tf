@@ -22,12 +22,12 @@ provider "azurerm" {
 
 
 
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "rg-01" {
   name     = "samsung-rg-03"
   location = "West Europe"
 }
 
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "rg-02" {
   name     = "samsung-rg-04"
   location = "West Europe"
 }
