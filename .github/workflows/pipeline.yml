@@ -4,6 +4,10 @@ on:
     branches:
       - main
       - 'releases/**'
+
+permissions:
+  id-token: write    # Required for OIDC
+  contents: read     # Required for checkout
 jobs:
   infra-deployment-job:
     runs-on: ubuntu-latest
