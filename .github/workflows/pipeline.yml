@@ -14,7 +14,13 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
+      - name: Install Terraform
+ 
+        uses: little-core-labs/install-terraform@v2.0.0
+        with:
+          # Version of terraform to download
+          version: 1.13.1
+          
       - name: Azure Login
         uses: azure/login@v1
         with:
