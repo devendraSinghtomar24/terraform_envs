@@ -1,0 +1,20 @@
+name: infra-deployment-pipeline
+on:
+  push:
+    branches:
+      - main
+      - 'releases/**'
+jobs:
+  infra-deployment-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Azure Login
+        uses: azure/login@v2.3.0
+        with:
+          client-id: 3e785689-506d-45c2-860b-1299c40fc015
+          tenant-id: 34d46aef-2a2b-43e6-b6e1-0aef0da4ad9a
+          subscription-id: e08e3abd-807e-4b84-8dff-5647daf004e3
+              
