@@ -22,7 +22,7 @@ provider "azurerm" {
 
 
 
-resource "azurerm_resource_group" "rg-01" {
+resource "azurerm_resource_group" "rg" {
   name     = "samsung-rg-03"
   location = "West Europe"
 }
