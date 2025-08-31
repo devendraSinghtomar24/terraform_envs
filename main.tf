@@ -26,3 +26,8 @@ resource "azurerm_resource_group" "rg" {
   name     = "samsung-rg-03"
   location = "West Europe"
 }
+
+resource "azurerm_resource_group" "rg" {
+  name     = "samsung-rg-04"
+  location = "West Europe"
+}
