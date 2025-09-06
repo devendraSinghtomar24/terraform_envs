@@ -1,0 +1,21 @@
+name: Terraform infra workflow
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
+jobs:
+  infra-deployment:
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Terraform installer
+      # You may pin to the exact commit or the version.
+      # uses: autero1/action-terraform@43105c5ac1431a67287f012739dbbe6a163d6d95
+      uses: autero1/action-terraform@v3.0.1
+      with:
+        # Terraform version to install
+        terraform-version: # optional
+        # File containing the Terraform version to install.  Examples: .terraform-version
+        terraform-version-file: # optional
+          
